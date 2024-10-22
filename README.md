@@ -1,1 +1,3 @@
 # Projeto-Integrador
+
+O presente projeto integrador é designado a apresentação e desenvolvimento da plataforma ProTrade. Em termos gerais, o sistema ProTrade é uma aplicação desenvolvida para aprimorar decisões estratégicas no mercado financeiro, com ênfase na análise técnica de trading. O objetivo central da plataforma é oferecer um ambiente interativo especializado que possibilite a análise detalhada de dados financeiros essenciais, como preços de ativos, volumes de negociação e movimentos de mercado. Através de ferramentas avançadas de interpretação e visualização de indicadores técnicos, a plataforma facilita a avaliação de tendências e padrões de mercado, auxiliando os usuários a tomarem decisões de negociação mais informadas e baseadas em dados. 
