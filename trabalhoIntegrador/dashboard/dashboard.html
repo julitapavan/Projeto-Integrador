@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>ProTrader - Dashboard</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Ícones e Bibliotecas Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Bibliotecas Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!--  Bootstrap Stylesheet -->
+    <link href="/bootstrap.css" rel="stylesheet">
+
+    <!--  Stylesheet -->
+    <link href="dashboard.css" rel="stylesheet">
+    <link href="listas.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/plotly.js-dist@2.18.3/plotly.min.js" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid position-relative bg-white d-flex p-0">
+        <!-- Sidebar  -->
+        <div class="sidebar pe-4 pb-3">
+            <nav class="navbar bg-light navbar-light">
+                <a href="dashboard.html" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary">Dashboard</h3>
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="/images/user.jpg" alt="" style="width: 40px; height: 40px;">
+                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">Julia</h6>
+                        <span>Trader</span>
+                    </div>
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="dashboard.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="/transacoes/transacoes.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Transações</a>
+                    <a href="/noticias/noticias.html" class="nav-item nav-link"><i class="fa fa-newspaper me-2"></i>Notícias</a>
+                    <a href="/calendario/calendario.html" class="nav-item nav-link"><i class="fa fa-calendar me-2"></i>Calendário</a>
+                  
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Configurações</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="/personalizar/icones.html" class="dropdown-item">Personalizar</a>
+                            <a href="/personalizar/tipografia.html" class="dropdown-item">Tipografia</a>
+                            <a href="/index.html" class="dropdown-item">Sair</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Sidebar  -->
+       <div class="content">
+        <!-- Navbar Início -->
+        <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+            <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+            </a>
+            <a href="#" class="sidebar-toggler flex-shrink-0">
+                <i class="fa fa-bars"></i>
+            </a>
+            <form class="d-none d-md-flex ms-4">
+                <input class="form-control border-0" type="search" placeholder="Pesquisar...">
+            </form>
+            <div class="navbar-nav align-items-center ms-auto">
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        <i class="fa fa-envelope me-lg-2"></i>
+                        <span class="d-none d-lg-inline-flex">Mensagens</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                        <a href="#" class="dropdown-item">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle" src="/images/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                <div class="ms-2">
+                                    <h6 class="fw-normal mb-0">Julia enviou uma mensagem para você.</h6>
+                                    <small>15 minutos atrás.</small>
+                                </div>
+                            </div>
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="#" class="dropdown-item">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle" src="/images/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                <div class="ms-2">
+                                    <h6 class="fw-normal mb-0">Julia enviou uma mensagem para você.</h6>
+                                    <small>25 minutos atrás.</small>
+                                </div>
+                            </div>
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="#" class="dropdown-item">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle" src="/images/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                <div class="ms-2">
+                                    <h6 class="fw-normal mb-0">Julia enviou uma mensagem para você.</h6>
+                                    <small>10 minutos atrás.</small>
+                                </div>
+                            </div>
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="#" class="dropdown-item text-center">Ver todas as mensagens</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        <i class="fa fa-bell me-lg-2"></i>
+                        <span class="d-none d-lg-inline-flex">Notificações</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                        <a href="#" class="dropdown-item">
+                            <h6 class="fw-normal mb-0">Perfil atualizado.</h6>
+                            <small>10 minutos atrás</small>
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="#" class="dropdown-item">
+                            <h6 class="fw-normal mb-0">Nova transação cadastrada.</h6>
+                            <small>15 minutos atrás</small>
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="#" class="dropdown-item text-center">Ver todas as notificações</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        <img class="rounded-circle me-lg-2" src="/images/user.jpg" alt="" style="width: 40px; height: 40px;">
+                        <span class="d-none d-lg-inline-flex">Julia</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                        <a href="#" class="dropdown-item">Meu Perfil</a>
+                        
+                        <a href="#" class="dropdown-item">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar Final -->
+        <h2 class="text-center text-primary">Dashboard</h2>
+         <!-- Gráfico Início -->
+    <div class="container-fluid pt-4 px-4">
+        <div class="row">
+            <div class="col-sm-12 col-xl-12">
+                <div class="card bg-light border-0">
+                    <div class="card-header ">
+                        <h3 class="text-center ">Mercados</h3>
+                        <h3 class=" ">Gráfico de Preço de Fechamento de Ação</h3>
+                    </br>
+     <!-- Campo para o usuário digitar o símbolo da ação -->
+                        <label class="" for="stock-symbol">Escolha a ação: </label>
+                    </br>
+                        <input class=""type="text" id="stock-symbol" placeholder="Ex: AAPL, MSFT, TSLA">
+                        <button class="" onclick="getStockData()"> Mostrar Gráfico</button>
+                </br>
+                    <!-- exibir o gráfico -->
+                    <div id="chart"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    <!-- Gráfico Final -->
+            <div class="container my-4">
+                <h2>Lista de Tarefas</h2>
+
+                <!-- Formulário para adicionar nova tarefa -->
+                <div class="card p-3 mb-3">
+                    <div class="row g-2">
+                        <div class="col-md-4">
+                            <input type="text" id="task-title" class="form-control" placeholder="Título da tarefa">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" id="task-desc" class="form-control" placeholder="Descrição da tarefa">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="date" id="task-date" class="form-control">
+                        </div>
+                        <div class="col-md-1">
+                            <button class="btn btn-primary w-100" onclick="addTask()">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lista de tarefas -->
+                <ul id="task-list" class="list-group">
+                    <!-- Tarefas serão adicionadas dinamicamente aqui -->
+                </ul>
+            </div>
+               <!-- Footer -->
+               <div class="container-fluid pt-4 px-4">
+                <div class="bg-light rounded-top p-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 text-center text-sm-start">
+                            &copy; <a href="#">ProTrader</a>, Todos os Direitos Reservados.
+                        </div>
+                        <div class="col-12 col-sm-6 text-center text-sm-end">
+                           Desenvolvido por Julia Pavan.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Final -->
+        </div>
+        <!-- De volta pro topo -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript  -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/chart/chart.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>       
+
+</body>
+
+</html>

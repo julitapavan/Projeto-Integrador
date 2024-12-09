@@ -1,0 +1,40 @@
+body {
+    background: linear-gradient(135deg, #42063a, #dc3545);
+    font-family: 'Arial', sans-serif;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.input-group-text {
+    border: none;
+    border-radius: 15px 0 0 15px;
+}
+
+.form-control {
+    border: none;
+    border-radius: 0 15px 15px 0;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    border: none;
+    border-radius: 15px;
+    background-color: #dc3545;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #dc3545;
+}
+
+.text-primary {
+    color: #dc3545 !important;
+}
+
+.text-primary:hover {
+    text-decoration: underline;
+}
